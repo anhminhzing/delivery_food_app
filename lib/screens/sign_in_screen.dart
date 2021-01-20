@@ -1,4 +1,5 @@
 
+import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,9 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.only(
-          top: 48,
-          left: 24,
-          right: 24,
+          top: AppPadding.paddingVertical,
+          left: AppPadding.paddingHorizontal,
+          right: AppPadding.paddingHorizontal,
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -28,25 +29,23 @@ class _SignInScreenState extends State<SignInScreen> {
                 },
                 child: Icon(
                   Icons.arrow_back_ios,
-                  color: Colors.black,
+                  color: AppColor.black,
                 ),
               ),
-              SizedBox(height: 50,),
+              AppDistance.bigSize,
               Text(
                 'Sign In',
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: AppFontSize.bigSize,
                 ),
               ),
-              SizedBox(
-                height: 18,
-              ),
+              AppDistance.smallSize,
               Row(
                 children: [
                   Text(
                     'Don\'t have an account ?',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: AppFontSize.smallSize,
                     ),
                   ),
                  GestureDetector(
@@ -59,110 +58,117 @@ class _SignInScreenState extends State<SignInScreen> {
                    child:  Text(
                      ' Sign up now',
                      style: TextStyle(
-                       fontSize: 18,
-                       color: Color(0xFFFD6D3B),
+                       fontSize: AppFontSize.smallSize,
+                       color: AppColor.orange,
                      ),
                    ),
                  )
                 ],
               ),
-              SizedBox(height: 30,),
+              AppDistance.smallSize,
               TextField(
-                cursorColor: Colors.black,
+                cursorColor: AppColor.neutral1,
+                style: TextStyle(
+                  fontSize: AppFontSize.smallSize,
+                  color: AppColor.neutral1,
+                ),
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: AppColor.orange,
+                        width: 2.0,
+                        style: BorderStyle.solid
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: AppColor.neutral3,
+                        width: 1.0,
+                        style: BorderStyle.solid
+                    ),
+                  ),
                   labelText: 'Email or Phone Number',
                 ),
               ),
-              SizedBox(height: 20,),
+              AppDistance.smallSize,
               TextField(
-                controller: TextEditingController(),
-                cursorColor: Colors.black,
+                cursorColor: AppColor.neutral1,
                 obscureText: true,
+                style: TextStyle(
+                  fontSize: AppFontSize.smallSize,
+                  color: AppColor.neutral1,
+                ),
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: AppColor.orange,
+                        width: 2.0,
+                        style: BorderStyle.solid
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: AppColor.neutral3,
+                        width: 1.0,
+                        style: BorderStyle.solid
+                    ),
+                  ),
                   labelText: 'Password',
                 ),
               ),
-              SizedBox(height: 20,),
+              AppDistance.smallSize,
               Center(
                 child: Text(
                   'Forgot Password ?',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: AppFontSize.smallSize,
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              AppDistance.smallSize,
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ButtonTheme(
                     minWidth:double.infinity,
-                    height: 47,
+                    height: 50,
                     child: RaisedButton(
-                        color: Color(0xFFFD6D3B),
+                        color: AppColor.orange,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6)
+                        ),
                         onPressed: (){
                           print('Sign in');
                         },
-                        child: Container(
-                            width: 327,
-                            height: 46,
-                            child:  Center(
-                              child: Text(
-                                'SIGN IN',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            )
+                        child: Center(
+                          child: Text(
+                            'SIGN IN',
+                            style: TextStyle(
+                              fontSize: AppFontSize.smallSize,
+                              color: Colors.white,
+                            ),
+                          ),
                         )
                     ),
                   ),
-                  SizedBox(height: 20,),
+                 AppDistance.smallSize,
                   Text(
                       'OR',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: AppFontSize.smallSize,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  ButtonTheme(
-                    minWidth:double.infinity,
-                    height: 47,
-                    child: RaisedButton(
-                        color: Color(0xFFFD6D3B),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(3),
-                        ),
-                        elevation: 0,
-                        onPressed: (){
-                          print('Facebook');
-                        },
-                        child: Column(
-                          children: [
-                            // Icon(Icons.)
-                            Text('CONTINUE WITH FACEBOOK')
-                          ],
-                        )
-                    ),
+                 AppDistance.smallSize,
+                  Image(
+                    width: double.infinity,
+                    image: AssetImage('assets/buttons/Facebook2x.png'),
                   ),
-                  SizedBox(height: 20,),
-                  ButtonTheme(
-                    minWidth:double.infinity,
-                    height: 47,
-                    child: RaisedButton(
-                        elevation: 0,
-                        color: Color(0xFFFD6D3B),
-                        onPressed: (){
-                          print('Google');
-                        },
-                        child: Text('CONTINUE WITH GOOGLE')
-                    ),
-                  ),
+                  AppDistance.smallSize,
+                  Image(
+                    image: AssetImage('assets/buttons/Google2x.png'),
+                  )
                 ],
               )
             ],
