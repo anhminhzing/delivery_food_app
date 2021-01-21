@@ -1,5 +1,6 @@
 
 import 'package:delivery_food_app/commons/variables.dart';
+import 'package:delivery_food_app/components/foodCardInOrder.dart';
 import 'package:delivery_food_app/components/restaurantCard.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,9 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                     'Restaurant card default: ',
                   ),
                   RestaurantCard(),
+                  SizedBox(height: 50,),
+                  Text('Food card in order:'),
+                  FoodCardInOrder(),
                 ],
               ),
             )
