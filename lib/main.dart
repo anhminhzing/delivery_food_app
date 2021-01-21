@@ -1,3 +1,4 @@
+import 'package:delivery_food_app/screens/components_screen.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => (SignUpScreen())),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('Components'),
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => (ComponentsScreen())),
                 );
               },
             ),
