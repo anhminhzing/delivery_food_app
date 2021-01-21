@@ -181,6 +181,43 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   AppDistance.smallSize,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'By signing up you agree to our ',
+                        style: TextStyle(
+                          fontSize: AppFontSize.smallSize,
+                          color: AppColor.black,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Terms Condition',
+                            style: TextStyle(
+                              fontSize: AppFontSize.smallSize,
+                              color: AppColor.orange,
+                            ),
+                          ),
+                          Text(
+                            ' \&',
+                            style: TextStyle(
+                                fontSize: AppFontSize.smallSize),
+                          ),
+                          Text(
+                            ' Privacy Policy',
+                            style: TextStyle(
+                              fontSize: AppFontSize.smallSize,
+                              color: AppColor.orange,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  AppDistance.smallSize,
                   Text(
                     'OR',
                     style: TextStyle(
