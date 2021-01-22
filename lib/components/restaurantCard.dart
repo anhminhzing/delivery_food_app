@@ -8,12 +8,12 @@ class RestaurantCard extends StatefulWidget {
 }
 
 class _RestaurantCardState extends State<RestaurantCard> {
-  Widget get distance => SizedBox(height: 16,);
+  Widget get distance => SizedBox(height: 10,);
   Widget get smallDistance => SizedBox(width: 5,);
-  Color  get textInfoColor => Color(0xFF4F585E);
-  Color  get textFoodColor => Color(0x4F585E);
-  double get foodFontSize  => AppFontSize.smallSize;
-  double get infoFontSize  => 16;
+  Color  get textInfoColor => AppColor.neutral3;
+  Color  get textFoodColor => AppColor.neutral3;
+  double get foodFontSize  => 18;
+  double get infoFontSize  => 14;
 
   TextStyle get infoTextStyle => TextStyle(
       color: textInfoColor,
@@ -22,8 +22,8 @@ class _RestaurantCardState extends State<RestaurantCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 240,
-      height: 180,
+      width: 241,
+      height: 200,
       decoration: BoxDecoration(
         border: Border.all(
           color: AppColor.neutral1,
@@ -56,10 +56,22 @@ class _RestaurantCardState extends State<RestaurantCard> {
               children: [
                 Text(
                   'Creamos - Cheapel In',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: foodFontSize,
                     fontWeight: FontWeight.bold,
-                    color: AppColor.black,
+                    color: textFoodColor,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Text(
+                  'Chapel Ln, Harriseahead',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: AppColor.neutral3,
                   ),
                 ),
                 distance,

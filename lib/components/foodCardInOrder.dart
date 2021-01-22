@@ -11,7 +11,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
 
   double get smallDistance => 13;
   double get mediumDistance => 26;
-
+  double get smallFontText => 16;
 
   TextStyle get priceTextStyle => TextStyle(
     fontSize: 20,
@@ -24,20 +24,28 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
     return Container(
       width: 375,
       height: 112,
-      color: AppColor.white,
+      decoration: BoxDecoration(
+        color: AppColor.white,
+        border: Border(
+          bottom: BorderSide(
+            color: AppColor.neutral2,
+            width: 1.0,
+          )
+        )
+      ),
       padding: const EdgeInsets.only(
         top: 15,
-        bottom: 15,
+        bottom: 10,
         right: 15,
       ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 80,
-            height: 80,
+            width: 90,
+            height: 90,
             decoration: BoxDecoration(
-              color: Colors.red,
+              // color: Colors.red,
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(
                 image: AssetImage('assets/foods/food2.jpeg'),
@@ -56,7 +64,10 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Pizzon - Crib Ln',
+                      // 'Pizzon - Crib Ln',
+                      'Pizzon - Crib Ln Pizzon',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 20,
                         color: AppColor.black,
@@ -64,6 +75,8 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                     ),
                     Text(
                       '1 x Shrimp Pizza',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                       fontSize: 15,
                       color: AppColor.neutral3,
@@ -78,14 +91,14 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                       children: [
                         Icon(
                           Icons.access_time,
-                          size: 13,
+                          size: smallFontText,
                           color: AppColor.orange,
                         ),
                         SizedBox(width: 5,),
                         Text(
                           '14:50',
                           style: TextStyle(
-                            fontSize: 13,
+                            fontSize: smallFontText,
                             color: AppColor.orange,
                           ),
                         )
@@ -96,7 +109,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                        Text(
                          '\$',
                          style: TextStyle(
-                           fontSize: 16,
+                           fontSize: smallFontText,
                            color: AppColor.orange,
                            fontWeight: FontWeight.bold,
                          ),
@@ -105,7 +118,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                         Text(
                           '16',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: smallFontText,
                             color: AppColor.orange,
                             fontWeight: FontWeight.bold,
                           ),
