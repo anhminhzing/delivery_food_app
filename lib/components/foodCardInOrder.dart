@@ -11,24 +11,19 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
 
   double get smallDistance => 13;
   double get mediumDistance => 26;
-  double get smallFontText => 16;
-
-  TextStyle get priceTextStyle => TextStyle(
-    fontSize: 20,
-    color: AppColor.orange,
-  );
+  double get smallFontText => 14;
 
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
+      width: 327,
       height: 112,
       decoration: BoxDecoration(
         color: AppColor.white,
         border: Border(
           bottom: BorderSide(
-            color: AppColor.neutral2,
+            color: AppColor.neutral4,
             width: 1.0,
           )
         )
@@ -42,8 +37,8 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 90,
-            height: 90,
+            width: 80,
+            height: 80,
             decoration: BoxDecoration(
               // color: Colors.red,
               borderRadius: BorderRadius.circular(8),
@@ -69,7 +64,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         color: AppColor.black,
                       ),
                     ),
@@ -78,7 +73,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 14,
                       color: AppColor.neutral3,
                     ),
                     )

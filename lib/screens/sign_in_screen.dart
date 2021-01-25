@@ -12,13 +12,13 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.only(
-          top: AppPadding.paddingVertical,
-          left: AppPadding.paddingHorizontal,
-          right: AppPadding.paddingHorizontal,
-        ),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.only(
+            top: AppPadding.paddingVertical,
+            left: AppPadding.paddingHorizontal,
+            right: AppPadding.paddingHorizontal,
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

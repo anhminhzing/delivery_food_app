@@ -14,7 +14,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return  Scaffold(
       body: Container(
         padding: const EdgeInsets.only(
-          top: AppPadding.paddingVertical,
           left: AppPadding.paddingHorizontal,
           right: AppPadding.paddingHorizontal,
         ),
@@ -23,6 +22,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: AppPadding.paddingVertical,
+              ),
              GestureDetector(
                onTap: (){
                  Navigator.pop(context);

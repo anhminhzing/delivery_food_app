@@ -30,12 +30,12 @@ class AppColor {
 }
 
 class AppDistance{
-  static const bigSize               = SizedBox(height: 50);
-  static const smallSize             = SizedBox(height: 20);
+  static const bigSize               = SizedBox(height: 30);
+  static const smallSize             = SizedBox(height: 15);
 }
 
 class AppFontSize {
-  static const bigSize               = 40.0;
-  static const smallSize             = 18.0;
+  static const bigSize               =  30.0;
+  static const smallSize             = 14.0;
 
 }

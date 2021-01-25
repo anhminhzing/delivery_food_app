@@ -12,8 +12,8 @@ class _RestaurantCardState extends State<RestaurantCard> {
   Widget get smallDistance => SizedBox(width: 5,);
   Color  get textInfoColor => AppColor.neutral3;
   Color  get textFoodColor => AppColor.neutral3;
-  double get foodFontSize  => 18;
-  double get infoFontSize  => 14;
+  double get foodFontSize  => 16;
+  double get infoFontSize  => 12;
 
   TextStyle get infoTextStyle => TextStyle(
       color: textInfoColor,
@@ -23,7 +23,7 @@ class _RestaurantCardState extends State<RestaurantCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 241,
-      height: 200,
+      height: 188,
       decoration: BoxDecoration(
         border: Border.all(
           color: AppColor.neutral1,
