@@ -1,5 +1,5 @@
-
 import 'package:delivery_food_app/commons/variables.dart';
+import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantCard extends StatefulWidget {
@@ -8,28 +8,31 @@ class RestaurantCard extends StatefulWidget {
 }
 
 class _RestaurantCardState extends State<RestaurantCard> {
-  Widget get distance => SizedBox(height: 10,);
-  Widget get smallDistance => SizedBox(width: 5,);
-  Color  get textInfoColor => AppColor.neutral3;
-  Color  get textFoodColor => AppColor.neutral3;
-  double get foodFontSize  => 16;
-  double get infoFontSize  => 12;
+  Widget get distance => SizedBox(
+        height: 10,
+      );
+  Widget get smallDistance => SizedBox(
+        width: 5,
+      );
+  Color get textInfoColor => AppColor.neutral3;
+  Color get textFoodColor => AppColor.neutral3;
+  double get foodFontSize => 16;
+  double get infoFontSize => 12;
 
   TextStyle get infoTextStyle => TextStyle(
-      color: textInfoColor,
-      fontSize: infoFontSize,
-  );
+        color: textInfoColor,
+        fontSize: infoFontSize,
+      );
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 241,
       height: 188,
       decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColor.neutral1,
-        ),
-        borderRadius: BorderRadius.circular(10.0)
-      ),
+          border: Border.all(
+            color: AppColor.neutral1,
+          ),
+          borderRadius: BorderRadius.circular(10.0)),
       child: Column(
         children: [
           Container(
@@ -37,14 +40,13 @@ class _RestaurantCardState extends State<RestaurantCard> {
             height: 100,
             decoration: BoxDecoration(
               color: Colors.red,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                ),
-                image: DecorationImage(
-                image: AssetImage('assets/foods/food2.jpeg'),
-                fit: BoxFit.fill
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
               ),
+              image: DecorationImage(
+                  image: AssetImage('assets/foods/food2.jpeg'),
+                  fit: BoxFit.fill),
             ),
           ),
           distance,
@@ -64,7 +66,9 @@ class _RestaurantCardState extends State<RestaurantCard> {
                     color: textFoodColor,
                   ),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Text(
                   'Chapel Ln, Harriseahead',
                   maxLines: 1,
@@ -86,9 +90,15 @@ class _RestaurantCardState extends State<RestaurantCard> {
                           size: infoFontSize,
                         ),
                         smallDistance,
-                        Text('18', style: infoTextStyle,),
+                        Text(
+                          '18',
+                          style: infoTextStyle,
+                        ),
                         smallDistance,
-                        Text('min', style: infoTextStyle,),
+                        Text(
+                          'min',
+                          style: infoTextStyle,
+                        ),
                       ],
                     ),
                     Row(
@@ -99,9 +109,15 @@ class _RestaurantCardState extends State<RestaurantCard> {
                           size: infoFontSize,
                         ),
                         smallDistance,
-                        Text('3', style: infoTextStyle,),
+                        Text(
+                          '3',
+                          style: infoTextStyle,
+                        ),
                         smallDistance,
-                        Text('km', style: infoTextStyle,)
+                        Text(
+                          'km',
+                          style: infoTextStyle,
+                        )
                       ],
                     ),
                     Row(
@@ -112,7 +128,10 @@ class _RestaurantCardState extends State<RestaurantCard> {
                           size: infoFontSize,
                         ),
                         smallDistance,
-                        Text('5.0', style: infoTextStyle,),
+                        Text(
+                          '5.0',
+                          style: infoTextStyle,
+                        ),
                       ],
                     )
                   ],

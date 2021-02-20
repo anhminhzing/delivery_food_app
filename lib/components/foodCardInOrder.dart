@@ -1,5 +1,5 @@
-
 import 'package:delivery_food_app/commons/variables.dart';
+import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
 class FoodCardInOrder extends StatefulWidget {
@@ -8,11 +8,9 @@ class FoodCardInOrder extends StatefulWidget {
 }
 
 class _FoodCardInOrderState extends State<FoodCardInOrder> {
-
   double get smallDistance => 13;
   double get mediumDistance => 26;
   double get smallFontText => 14;
-
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +18,12 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
       width: 327,
       height: 112,
       decoration: BoxDecoration(
-        color: AppColor.white,
-        border: Border(
-          bottom: BorderSide(
+          color: AppColor.white,
+          border: Border(
+              bottom: BorderSide(
             color: AppColor.neutral4,
             width: 1.0,
-          )
-        )
-      ),
+          ))),
       padding: const EdgeInsets.only(
         top: 15,
         bottom: 10,
@@ -40,15 +36,16 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              // color: Colors.red,
-              borderRadius: BorderRadius.circular(8),
-              image: DecorationImage(
-                image: AssetImage('assets/foods/food2.jpeg'),
-                fit: BoxFit.fill,
-              )
-            ),
+                // color: Colors.red,
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: AssetImage('assets/foods/food2.jpeg'),
+                  fit: BoxFit.fill,
+                )),
           ),
-          SizedBox(width: smallDistance,),
+          SizedBox(
+            width: smallDistance,
+          ),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,9 +70,9 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                      fontSize: 14,
-                      color: AppColor.neutral3,
-                    ),
+                        fontSize: 14,
+                        color: AppColor.neutral3,
+                      ),
                     )
                   ],
                 ),
@@ -89,7 +86,9 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                           size: smallFontText,
                           color: AppColor.orange,
                         ),
-                        SizedBox(width: 5,),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
                           '14:50',
                           style: TextStyle(
@@ -101,15 +100,17 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                     ),
                     Row(
                       children: [
-                       Text(
-                         '\$',
-                         style: TextStyle(
-                           fontSize: smallFontText,
-                           color: AppColor.orange,
-                           fontWeight: FontWeight.bold,
-                         ),
-                       ),
-                        SizedBox(width: 5,),
+                        Text(
+                          '\$',
+                          style: TextStyle(
+                            fontSize: smallFontText,
+                            color: AppColor.orange,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
                           '16',
                           style: TextStyle(

@@ -1,6 +1,6 @@
-
 import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
+import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -11,7 +11,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Container(
         padding: const EdgeInsets.only(
           left: AppPadding.paddingHorizontal,
@@ -25,16 +25,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: AppPadding.paddingVertical,
               ),
-             GestureDetector(
-               onTap: (){
-                 Navigator.pop(context);
-               },
-               child:  Icon(
-                 Icons.arrow_back_ios,
-                 color: AppColor.black,
-               ),
-             ),
-             AppDistance.bigSize,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: AppColor.black,
+                ),
+              ),
+              AppDistance.bigSize,
               Text(
                 'Sign Up',
                 style: TextStyle(
@@ -47,31 +47,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   Text(
                     'Enter your Email and new Password',
-                    style:  TextStyle(
-                        fontSize: AppFontSize.smallSize,
-                        color: AppColor.black,
+                    style: TextStyle(
+                      fontSize: AppFontSize.smallSize,
+                      color: AppColor.black,
                     ),
                   ),
                   Row(
                     children: [
                       Text(
                         'for sign up, or ',
-                        style:  TextStyle(
+                        style: TextStyle(
                           fontSize: AppFontSize.smallSize,
                         ),
                       ),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => (SignInScreen())
-                            )
-                          );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => (SignInScreen())));
                         },
                         child: Text(
                           'Already have account?',
-                          style:  TextStyle(
+                          style: TextStyle(
                             fontSize: AppFontSize.smallSize,
                             color: AppColor.orange,
                           ),
@@ -93,15 +91,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     borderSide: BorderSide(
                         color: AppColor.orange,
                         width: 2.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: AppColor.neutral3,
                         width: 1.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   labelText: 'Email or Phone Number',
                 ),
@@ -119,15 +115,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     borderSide: BorderSide(
                         color: AppColor.orange,
                         width: 2.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: AppColor.neutral3,
                         width: 1.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   labelText: 'Password',
                 ),
@@ -145,30 +139,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     borderSide: BorderSide(
                         color: AppColor.orange,
                         width: 2.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: AppColor.neutral3,
                         width: 1.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   labelText: 'Confirm Password',
                 ),
               ),
-             AppDistance.smallSize,
+              AppDistance.smallSize,
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ButtonTheme(
-                    minWidth:double.infinity,
+                    minWidth: double.infinity,
                     height: 50,
                     child: RaisedButton(
                         color: AppColor.orange,
-                        onPressed: (){
+                        onPressed: () {
                           print('Sign up');
                         },
                         child: Center(
@@ -179,8 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               color: AppColor.white,
                             ),
                           ),
-                        )
-                    ),
+                        )),
                   ),
                   AppDistance.smallSize,
                   Column(
@@ -205,8 +196,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           Text(
                             ' \&',
-                            style: TextStyle(
-                                fontSize: AppFontSize.smallSize),
+                            style: TextStyle(fontSize: AppFontSize.smallSize),
                           ),
                           Text(
                             ' Privacy Policy',

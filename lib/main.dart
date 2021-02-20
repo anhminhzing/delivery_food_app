@@ -1,6 +1,8 @@
 import 'package:delivery_food_app/screens/components_screen.dart';
+import 'package:delivery_food_app/screens/navbar_screen.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
+import 'package:delivery_food_app/theme/themedata.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,20 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // primarySwatch: Colors.blue,
-        primaryColor: Color(0xFFFD6D3B),
-        accentColor: Color(0xFFFC9631),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: DataTheme.lightTheme,
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -44,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             RaisedButton(
               child: Text('Sign in'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => (SignInScreen())),
@@ -53,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               child: Text('Sign up'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => (SignUpScreen())),
@@ -62,10 +57,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               child: Text('Components'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => (ComponentsScreen())),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('Navbar'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => (NavbarScreen())),
                 );
               },
             ),

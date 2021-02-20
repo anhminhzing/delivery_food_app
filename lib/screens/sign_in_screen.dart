@@ -1,6 +1,6 @@
-
 import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
+import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _SignInScreenState extends State<SignInScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pop(context);
                 },
                 child: Icon(
@@ -48,21 +48,21 @@ class _SignInScreenState extends State<SignInScreen> {
                       fontSize: AppFontSize.smallSize,
                     ),
                   ),
-                 GestureDetector(
-                   onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => (SignUpScreen()))
-                    );
-                   },
-                   child:  Text(
-                     ' Sign up now',
-                     style: TextStyle(
-                       fontSize: AppFontSize.smallSize,
-                       color: AppColor.orange,
-                     ),
-                   ),
-                 )
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => (SignUpScreen())));
+                    },
+                    child: Text(
+                      ' Sign up now',
+                      style: TextStyle(
+                        fontSize: AppFontSize.smallSize,
+                        color: AppColor.orange,
+                      ),
+                    ),
+                  )
                 ],
               ),
               AppDistance.smallSize,
@@ -77,15 +77,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderSide: BorderSide(
                         color: AppColor.orange,
                         width: 2.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: AppColor.neutral3,
                         width: 1.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   labelText: 'Email or Phone Number',
                 ),
@@ -103,15 +101,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderSide: BorderSide(
                         color: AppColor.orange,
                         width: 2.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: AppColor.neutral3,
                         width: 1.0,
-                        style: BorderStyle.solid
-                    ),
+                        style: BorderStyle.solid),
                   ),
                   labelText: 'Password',
                 ),
@@ -131,14 +127,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ButtonTheme(
-                    minWidth:double.infinity,
+                    minWidth: double.infinity,
                     height: 50,
                     child: RaisedButton(
                         color: AppColor.orange,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6)
-                        ),
-                        onPressed: (){
+                            borderRadius: BorderRadius.circular(6)),
+                        onPressed: () {
                           print('Sign in');
                         },
                         child: Center(
@@ -149,18 +144,17 @@ class _SignInScreenState extends State<SignInScreen> {
                               color: Colors.white,
                             ),
                           ),
-                        )
-                    ),
+                        )),
                   ),
-                 AppDistance.smallSize,
+                  AppDistance.smallSize,
                   Text(
-                      'OR',
+                    'OR',
                     style: TextStyle(
                       fontSize: AppFontSize.smallSize,
                       color: Colors.black,
                     ),
                   ),
-                 AppDistance.smallSize,
+                  AppDistance.smallSize,
                   Image(
                     width: double.infinity,
                     image: AssetImage('assets/buttons/Facebook2x.png'),
