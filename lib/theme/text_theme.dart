@@ -1,5 +1,5 @@
 import 'package:delivery_food_app/theme/appColor.dart';
-import 'package:delivery_food_app/theme/textstyle.dart';
+import 'package:delivery_food_app/theme/text_style.dart';
 import 'package:flutter/material.dart';
 
 class ThemeText {

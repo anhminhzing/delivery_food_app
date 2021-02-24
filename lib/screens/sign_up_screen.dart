@@ -218,14 +218,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   AppDistance.smallSize,
-                  Image(
-                    width: double.infinity,
-                    image: AssetImage('assets/buttons/Facebook2x.png'),
-                  ),
-                  AppDistance.smallSize,
-                  Image(
-                    image: AssetImage('assets/buttons/Google2x.png'),
-                  )
+                  // Image(
+                  //   width: double.infinity,
+                  //   image: AssetImage('assets/buttons/Facebook2x.png'),
+                  // ),
+                  // AppDistance.smallSize,
+                  // Image(
+                  //   image: AssetImage('assets/buttons/Google2x.png'),
+                  // )
                 ],
               )
             ],

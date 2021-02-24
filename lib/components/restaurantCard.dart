@@ -1,3 +1,4 @@
+import 'package:delivery_food_app/UIData.dart';
 import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
@@ -11,18 +12,24 @@ class _RestaurantCardState extends State<RestaurantCard> {
   Widget get distance => SizedBox(
         height: 10,
       );
+
   Widget get smallDistance => SizedBox(
         width: 5,
       );
+
   Color get textInfoColor => AppColor.neutral3;
+
   Color get textFoodColor => AppColor.neutral3;
+
   double get foodFontSize => 16;
+
   double get infoFontSize => 12;
 
   TextStyle get infoTextStyle => TextStyle(
         color: textInfoColor,
         fontSize: infoFontSize,
       );
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,8 +52,7 @@ class _RestaurantCardState extends State<RestaurantCard> {
                 topRight: Radius.circular(10),
               ),
               image: DecorationImage(
-                  image: AssetImage('assets/foods/food2.jpeg'),
-                  fit: BoxFit.fill),
+                  image: AssetImage(UIData.imgFood2), fit: BoxFit.fill),
             ),
           ),
           distance,

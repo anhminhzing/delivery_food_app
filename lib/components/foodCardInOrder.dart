@@ -1,4 +1,4 @@
-import 'package:delivery_food_app/commons/variables.dart';
+import 'package:delivery_food_app/UIData.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,9 @@ class FoodCardInOrder extends StatefulWidget {
 
 class _FoodCardInOrderState extends State<FoodCardInOrder> {
   double get smallDistance => 13;
+
   double get mediumDistance => 26;
+
   double get smallFontText => 14;
 
   @override
@@ -18,12 +20,14 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
       width: 327,
       height: 112,
       decoration: BoxDecoration(
-          color: AppColor.white,
-          border: Border(
-              bottom: BorderSide(
+        color: AppColor.white,
+        border: Border(
+          bottom: BorderSide(
             color: AppColor.neutral4,
             width: 1.0,
-          ))),
+          ),
+        ),
+      ),
       padding: const EdgeInsets.only(
         top: 15,
         bottom: 10,
@@ -36,12 +40,13 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-                // color: Colors.red,
-                borderRadius: BorderRadius.circular(8),
-                image: DecorationImage(
-                  image: AssetImage('assets/foods/food2.jpeg'),
-                  fit: BoxFit.fill,
-                )),
+              // color: Colors.red,
+              borderRadius: BorderRadius.circular(8),
+              image: DecorationImage(
+                image: AssetImage(UIData.imgFood1),
+                fit: BoxFit.fill,
+              ),
+            ),
           ),
           SizedBox(
             width: smallDistance,
@@ -118,7 +123,7 @@ class _FoodCardInOrderState extends State<FoodCardInOrder> {
                             color: AppColor.orange,
                             fontWeight: FontWeight.bold,
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],

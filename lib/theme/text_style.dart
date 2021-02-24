@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class StyleText {
   // w500 medium
   // w700 demi
+  // bold 800
   static const TextStyle h1 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.w500,

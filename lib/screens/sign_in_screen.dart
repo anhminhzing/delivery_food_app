@@ -35,8 +35,8 @@ class _SignInScreenState extends State<SignInScreen> {
               AppDistance.bigSize,
               Text(
                 'Sign In',
-                style: TextStyle(
-                  fontSize: AppFontSize.bigSize,
+                style: Theme.of(context).textTheme.headline1.copyWith(
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               AppDistance.smallSize,
@@ -155,14 +155,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   AppDistance.smallSize,
-                  Image(
-                    width: double.infinity,
-                    image: AssetImage('assets/buttons/Facebook2x.png'),
-                  ),
-                  AppDistance.smallSize,
-                  Image(
-                    image: AssetImage('assets/buttons/Google2x.png'),
-                  )
+                  // Image(
+                  //   width: double.infinity,
+                  //   image: AssetImage('assets/buttons/Facebook2x.png'),
+                  // ),
+                  // AppDistance.smallSize,
+                  // Image(
+                  //   image: AssetImage('assets/buttons/Google2x.png'),
+                  // )
                 ],
               )
             ],

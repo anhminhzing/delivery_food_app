@@ -1,7 +1,5 @@
-import 'package:delivery_food_app/screens/components_screen.dart';
-import 'package:delivery_food_app/screens/navbar_screen.dart';
-import 'package:delivery_food_app/screens/sign_in_screen.dart';
-import 'package:delivery_food_app/screens/sign_up_screen.dart';
+import 'package:delivery_food_app/routes/main_route.dart';
+import 'package:delivery_food_app/routes/route_name.dart';
 import 'package:delivery_food_app/theme/themedata.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: DataTheme.lightTheme,
       home: MyHomePage(),
+      initialRoute: '/',
+      onGenerateRoute: AppRoute.onGenerate,
     );
   }
 }
@@ -40,39 +40,30 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               child: Text('Sign in'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (SignInScreen())),
-                );
+                Navigator.pushNamed(context, RouteName.signIn);
               },
             ),
             RaisedButton(
               child: Text('Sign up'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (SignUpScreen())),
-                );
+                Navigator.pushNamed(context, RouteName.signUp);
               },
             ),
             RaisedButton(
               child: Text('Components'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (ComponentsScreen())),
-                );
+                Navigator.pushNamed(context, RouteName.component);
               },
             ),
-            RaisedButton(
-              child: Text('Navbar'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (NavbarScreen())),
-                );
-              },
-            ),
+            // RaisedButton(
+            //   child: Text('Navbar'),
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => (NavbarScreen())),
+            //     );
+            //   },
+            // ),
           ],
         ),
       ),
