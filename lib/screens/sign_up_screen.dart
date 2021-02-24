@@ -1,4 +1,6 @@
+import 'package:delivery_food_app/commons/components/input_textfield.dart';
 import 'package:delivery_food_app/commons/variables.dart';
+import 'package:delivery_food_app/routes/route_name.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
@@ -11,227 +13,146 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
+    final double smallVerticalSpace = MediaQuery.of(context).size.height * 0.02;
+    final double mediumVerticalSpace =
+        MediaQuery.of(context).size.height * 0.03;
+    final double bigVerticalSpace = MediaQuery.of(context).size.height * 0.08;
+
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.only(
-          left: AppPadding.paddingHorizontal,
-          right: AppPadding.paddingHorizontal,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: AppPadding.paddingVertical,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: AppColor.black,
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Container(
+          padding:  EdgeInsets.only(
+            top: bigVerticalSpace,
+            left: AppPadding.paddingHorizontal,
+            right: AppPadding.paddingHorizontal,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: AppColor.neutral1,
+                  ),
                 ),
-              ),
-              AppDistance.bigSize,
-              Text(
-                'Sign Up',
-                style: TextStyle(
-                  fontSize: AppFontSize.bigSize,
+                SizedBox(
+                  height: bigVerticalSpace,
                 ),
-              ),
-              AppDistance.smallSize,
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Enter your Email and new Password',
-                    style: TextStyle(
-                      fontSize: AppFontSize.smallSize,
-                      color: AppColor.black,
+                Text(
+                  'Sign Up',
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+                SizedBox(height: smallVerticalSpace),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Enter your Email and new Password',
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'for sign up, or ',
-                        style: TextStyle(
-                          fontSize: AppFontSize.smallSize,
+                    Row(
+                      children: [
+                        Text(
+                          'for sign up, or ',
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => (SignInScreen())));
-                        },
-                        child: Text(
-                          'Already have account?',
-                          style: TextStyle(
-                            fontSize: AppFontSize.smallSize,
-                            color: AppColor.orange,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-              AppDistance.smallSize,
-              TextField(
-                cursorColor: AppColor.neutral1,
-                style: TextStyle(
-                  fontSize: AppFontSize.smallSize,
-                  color: AppColor.neutral1,
-                ),
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.orange,
-                        width: 2.0,
-                        style: BorderStyle.solid),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.neutral3,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                  ),
-                  labelText: 'Email or Phone Number',
-                ),
-              ),
-              AppDistance.smallSize,
-              TextField(
-                cursorColor: AppColor.neutral1,
-                obscureText: true,
-                style: TextStyle(
-                  fontSize: AppFontSize.smallSize,
-                  color: AppColor.neutral1,
-                ),
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.orange,
-                        width: 2.0,
-                        style: BorderStyle.solid),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.neutral3,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                  ),
-                  labelText: 'Password',
-                ),
-              ),
-              AppDistance.smallSize,
-              TextField(
-                cursorColor: AppColor.neutral1,
-                obscureText: true,
-                style: TextStyle(
-                  fontSize: AppFontSize.smallSize,
-                  color: AppColor.neutral1,
-                ),
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.orange,
-                        width: 2.0,
-                        style: BorderStyle.solid),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: AppColor.neutral3,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                  ),
-                  labelText: 'Confirm Password',
-                ),
-              ),
-              AppDistance.smallSize,
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  ButtonTheme(
-                    minWidth: double.infinity,
-                    height: 50,
-                    child: RaisedButton(
-                        color: AppColor.orange,
-                        onPressed: () {
-                          print('Sign up');
-                        },
-                        child: Center(
+                        GestureDetector(
+                          onTap: () {
+                            navigateToPage(RouteName.signIn);
+                          },
                           child: Text(
-                            'SIGN UP',
-                            style: TextStyle(
-                              fontSize: AppFontSize.smallSize,
-                              color: AppColor.white,
-                            ),
+                            'Already have account?',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
                           ),
-                        )),
-                  ),
-                  AppDistance.smallSize,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'By signing up you agree to our ',
-                        style: TextStyle(
-                          fontSize: AppFontSize.smallSize,
-                          color: AppColor.black,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(height: smallVerticalSpace),
+                AppTextField(
+                  controller: TextEditingController(),
+                  label: 'Email or Phone Number',
+                ),
+                SizedBox(height: smallVerticalSpace),
+                AppTextField(
+                  controller: TextEditingController(),
+                  label: 'Password',
+                  isPassword: true,
+                ),
+                SizedBox(height: smallVerticalSpace),
+                AppTextField(
+                  controller: TextEditingController(),
+                  label: 'Confirm Password',
+                  isPassword: true,
+                ),
+                SizedBox(height: mediumVerticalSpace),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    RaisedButton(
+                      onPressed: () {
+                        print('Sign up');
+                      },
+                      child: Center(
+                        child: Text(
+                          'SIGN UP',
+                          style: Theme.of(context).accentTextTheme.button,
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Terms Condition',
-                            style: TextStyle(
-                              fontSize: AppFontSize.smallSize,
-                              color: AppColor.orange,
-                            ),
-                          ),
-                          Text(
-                            ' \&',
-                            style: TextStyle(fontSize: AppFontSize.smallSize),
-                          ),
-                          Text(
-                            ' Privacy Policy',
-                            style: TextStyle(
-                              fontSize: AppFontSize.smallSize,
-                              color: AppColor.orange,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  AppDistance.smallSize,
-                  Text(
-                    'OR',
-                    style: TextStyle(
-                      fontSize: AppFontSize.smallSize,
-                      color: AppColor.black,
                     ),
-                  ),
-                  AppDistance.smallSize,
-                  // Image(
-                  //   width: double.infinity,
-                  //   image: AssetImage('assets/buttons/Facebook2x.png'),
-                  // ),
-                  // AppDistance.smallSize,
-                  // Image(
-                  //   image: AssetImage('assets/buttons/Google2x.png'),
-                  // )
-                ],
-              )
-            ],
+                    SizedBox(height: mediumVerticalSpace),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'By signing up you agree to our ',
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Terms Condition',
+                              style:
+                                  Theme.of(context).primaryTextTheme.bodyText2,
+                            ),
+                            Text(
+                              ' \&',
+                              style:
+                                  Theme.of(context).primaryTextTheme.bodyText2,
+                            ),
+                            Text(
+                              ' Privacy Policy',
+                              style:
+                                  Theme.of(context).primaryTextTheme.bodyText2,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
+  }
+
+  void navigateToPage(String screen) {
+    Navigator.pushNamed(context, screen);
   }
 }

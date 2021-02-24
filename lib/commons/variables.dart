@@ -7,8 +7,8 @@ class AppPadding {
 }
 
 class AppDistance {
-  static const bigSize = SizedBox(height: 30);
-  static const smallSize = SizedBox(height: 15);
+  static const bigSize = SizedBox(height: 50);
+  static const smallSize = SizedBox(height: 20);
 }
 
 class AppFontSize {

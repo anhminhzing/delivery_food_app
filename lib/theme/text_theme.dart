@@ -12,6 +12,7 @@ class ThemeText {
     bodyText1: StyleText.body1,
     bodyText2: StyleText.body2,
     caption: StyleText.caption,
+    button: StyleText.button,
   ).apply(
     displayColor: AppColor.neutral1,
     bodyColor: AppColor.neutral1,
@@ -22,7 +23,7 @@ class ThemeText {
     bodyColor: AppColor.orange,
   );
 
-  static TextTheme buttonThemeText = themetext.apply(
+  static TextTheme accentThemeText = themetext.apply(
     displayColor: AppColor.white,
     bodyColor: AppColor.white,
   );
