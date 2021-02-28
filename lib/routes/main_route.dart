@@ -1,5 +1,6 @@
 import 'package:delivery_food_app/routes/route_name.dart';
 import 'package:delivery_food_app/screens/components_screen.dart';
+import 'package:delivery_food_app/screens/profileUser/profileuser_screen.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,16 +11,14 @@ class AppRoute {
     switch (setting.name) {
       case '/':
         return buildRoute(setting: setting, builder: SignInScreen());
-
       case RouteName.signIn:
         return buildRoute(setting: setting, builder: SignInScreen());
-
       case RouteName.signUp:
         return buildRoute(setting: setting, builder: SignUpScreen());
-
       case RouteName.component:
         return buildRoute(setting: setting, builder: ComponentsScreen());
-
+      case RouteName.profileUser:
+        return buildRoute(setting: setting, builder: ProfileUserScreen());
       default:
         return _errorBuild();
     }

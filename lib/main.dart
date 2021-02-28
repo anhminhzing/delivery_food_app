@@ -37,11 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
+            const SizedBox(
+              height: 20,
+            ),
             RaisedButton(
               child: Text('Sign in'),
               onPressed: () {
                 Navigator.pushNamed(context, RouteName.signIn);
               },
+            ),
+            const SizedBox(
+              height: 20,
             ),
             RaisedButton(
               child: Text('Sign up'),
@@ -49,25 +55,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, RouteName.signUp);
               },
             ),
+            const SizedBox(
+              height: 20,
+            ),
             RaisedButton(
               child: Text('Components'),
               onPressed: () {
                 Navigator.pushNamed(context, RouteName.component);
               },
             ),
-            // RaisedButton(
-            //   child: Text('Navbar'),
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => (NavbarScreen())),
-            //     );
-            //   },
-            // ),
+            const SizedBox(
+              height: 20,
+            ),
+            RaisedButton(
+              child: Text('User profile'),
+              onPressed: () {
+                Navigator.pushNamed(context, RouteName.profileUser);
+              },
+            ),
           ],
         ),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

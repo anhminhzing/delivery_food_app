@@ -23,7 +23,7 @@ class DataTheme {
       colorScheme: ColorScheme.light(primary: AppColor.orange),
       buttonColor: AppColor.orange,
       height: 48,
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),

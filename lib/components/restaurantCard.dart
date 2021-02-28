@@ -1,5 +1,4 @@
 import 'package:delivery_food_app/UIData.dart';
-import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 

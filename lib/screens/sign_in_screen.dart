@@ -24,7 +24,7 @@ class _SignInScreenState extends State<SignInScreen> {
         },
         child: SingleChildScrollView(
           child: Container(
-            padding:  EdgeInsets.only(
+            padding: EdgeInsets.only(
               top: bigVerticalSpace,
               left: AppPadding.paddingHorizontal,
               right: AppPadding.paddingHorizontal,
@@ -105,6 +105,10 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
         SizedBox(height: mediumVerticalSpace),
         RaisedButton(
+          elevation: 0,
+          hoverElevation: 0,
+          focusElevation: 0,
+          highlightElevation: 0,
           onPressed: () {
             print('Sign in');
           },

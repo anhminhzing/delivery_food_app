@@ -1,7 +1,6 @@
 import 'package:delivery_food_app/commons/components/input_textfield.dart';
 import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/routes/route_name.dart';
-import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           FocusScope.of(context).unfocus();
         },
         child: Container(
-          padding:  EdgeInsets.only(
+          padding: EdgeInsets.only(
             top: bigVerticalSpace,
             left: AppPadding.paddingHorizontal,
             right: AppPadding.paddingHorizontal,
@@ -102,6 +101,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     RaisedButton(
+                      elevation: 0,
+                      hoverElevation: 0,
+                      focusElevation: 0,
+                      highlightElevation: 0,
                       onPressed: () {
                         print('Sign up');
                       },

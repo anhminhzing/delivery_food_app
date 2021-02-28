@@ -19,7 +19,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                color: AppColor.light,
+                color: AppColor.white,
               ),
             ),
             Center(
