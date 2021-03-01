@@ -1,3 +1,4 @@
+import 'package:delivery_food_app/commons/variables.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:delivery_food_app/theme/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,18 @@ class DataTheme {
     buttonColor: AppColor.orange,
     fontFamily: 'AvenirNextLTPro',
     appBarTheme: AppBarTheme(
-      iconTheme: IconThemeData(color: AppColor.orange),
+      iconTheme: IconThemeData(
+        color: AppColor.neutral1,
+        size: 14,
+      ),
       brightness: Brightness.light,
+      color: AppColor.white,
+      textTheme: TextTheme(
+        headline6: ThemeText.themetext.headline3.copyWith(
+          color: AppColor.neutral1,
+        ),
+      ),
+      elevation: 1,
     ),
     buttonTheme: ButtonThemeData(
       textTheme: ButtonTextTheme.primary,

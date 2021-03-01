@@ -20,4 +20,6 @@ class AppColor {
   static const neutral2 = Color(0xFF697586);
   static const neutral3 = Color(0xFF9B9B9B);
   static const neutral4 = Color(0xFFC3C3C3);
+  static const neutral5 = Color(0xFFf6f6f6);
+  static const borderInput = Color(0xFFDBDFE3);
 }

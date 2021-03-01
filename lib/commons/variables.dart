@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // using on screens
 class AppPadding {
-  static const paddingVertical = 50.0;
+  static const paddingVertical = 20.0;
   static const paddingHorizontal = 24.0;
 }
 
