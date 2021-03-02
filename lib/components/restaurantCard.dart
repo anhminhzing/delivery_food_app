@@ -2,12 +2,7 @@ import 'package:delivery_food_app/UIData.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
 
-class RestaurantCard extends StatefulWidget {
-  @override
-  _RestaurantCardState createState() => _RestaurantCardState();
-}
-
-class _RestaurantCardState extends State<RestaurantCard> {
+class RestaurantCard extends StatelessWidget {
   Widget get distance => SizedBox(
         height: 10,
       );
@@ -16,29 +11,23 @@ class _RestaurantCardState extends State<RestaurantCard> {
         width: 5,
       );
 
-  Color get textInfoColor => AppColor.neutral3;
-
-  Color get textFoodColor => AppColor.neutral3;
-
-  double get foodFontSize => 16;
-
-  double get infoFontSize => 12;
-
-  TextStyle get infoTextStyle => TextStyle(
-        color: textInfoColor,
-        fontSize: infoFontSize,
-      );
-
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 241,
       height: 188,
       decoration: BoxDecoration(
-          border: Border.all(
-            color: AppColor.neutral1,
+        color: AppColor.white,
+        borderRadius: BorderRadius.circular(10.0),
+        boxShadow: [
+          BoxShadow(
+            color: AppColor.black.withOpacity(0.1),
+            spreadRadius: 5,
+            blurRadius: 8,
+            offset: Offset(0, 2), // changes position of shadow
           ),
-          borderRadius: BorderRadius.circular(10.0)),
+        ],
+      ),
       child: Column(
         children: [
           Container(
@@ -65,11 +54,10 @@ class _RestaurantCardState extends State<RestaurantCard> {
                   'Creamos - Cheapel In',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: foodFontSize,
-                    fontWeight: FontWeight.bold,
-                    color: textFoodColor,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      .copyWith(fontWeight: FontWeight.w600),
                 ),
                 SizedBox(
                   height: 10,
@@ -78,10 +66,10 @@ class _RestaurantCardState extends State<RestaurantCard> {
                   'Chapel Ln, Harriseahead',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColor.neutral3,
-                  ),
+                  style: Theme.of(context).textTheme.caption.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: AppColor.neutral3,
+                      ),
                 ),
                 distance,
                 Row(
@@ -92,17 +80,23 @@ class _RestaurantCardState extends State<RestaurantCard> {
                         Icon(
                           Icons.schedule,
                           color: AppColor.black,
-                          size: infoFontSize,
+                          size: 16,
                         ),
                         smallDistance,
                         Text(
                           '18',
-                          style: infoTextStyle,
+                          style: Theme.of(context)
+                              .accentTextTheme
+                              .caption
+                              .copyWith(color: AppColor.black),
                         ),
                         smallDistance,
                         Text(
                           'min',
-                          style: infoTextStyle,
+                          style: Theme.of(context)
+                              .accentTextTheme
+                              .caption
+                              .copyWith(color: AppColor.black),
                         ),
                       ],
                     ),
@@ -111,18 +105,17 @@ class _RestaurantCardState extends State<RestaurantCard> {
                         Icon(
                           Icons.fiber_manual_record,
                           color: AppColor.black,
-                          size: infoFontSize,
+                          size: 16,
                         ),
                         smallDistance,
                         Text(
-                          '3',
-                          style: infoTextStyle,
+                          '3 km',
+                          style: Theme.of(context)
+                              .accentTextTheme
+                              .caption
+                              .copyWith(color: AppColor.black),
                         ),
                         smallDistance,
-                        Text(
-                          'km',
-                          style: infoTextStyle,
-                        )
                       ],
                     ),
                     Row(
@@ -130,12 +123,15 @@ class _RestaurantCardState extends State<RestaurantCard> {
                         Icon(
                           Icons.star,
                           color: Colors.yellow,
-                          size: infoFontSize,
+                          size: 16,
                         ),
                         smallDistance,
                         Text(
                           '5.0',
-                          style: infoTextStyle,
+                          style: Theme.of(context)
+                              .accentTextTheme
+                              .caption
+                              .copyWith(color: AppColor.black),
                         ),
                       ],
                     )

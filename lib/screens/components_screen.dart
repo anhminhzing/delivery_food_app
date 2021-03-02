@@ -1,4 +1,6 @@
+import 'package:delivery_food_app/components/FoodCardInRestaurantPurchased.dart';
 import 'package:delivery_food_app/components/foodCardInOrder.dart';
+import 'package:delivery_food_app/components/foodCardInRestaurant.dart';
 import 'package:delivery_food_app/components/restaurantCard.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,9 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Component'),
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -28,7 +33,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 20,
                   ),
                   Text(
                     'Restaurant card default: ',
@@ -39,6 +44,16 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                   ),
                   Text('Food card in order:'),
                   FoodCardInOrder(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text('Food card in restaurant:'),
+                  FoodCardInRestaurant(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text('Food card in restaurant purchased:'),
+                  FoodCardInRestaurantPurchased(),
                 ],
               ),
             )

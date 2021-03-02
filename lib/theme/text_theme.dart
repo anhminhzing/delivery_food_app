@@ -24,7 +24,7 @@ class ThemeText {
   );
 
   static TextTheme accentThemeText = themetext.apply(
-    displayColor: AppColor.white,
-    bodyColor: AppColor.white,
+    displayColor: AppColor.neutral3,
+    bodyColor: AppColor.neutral3,
   );
 }
