@@ -115,7 +115,10 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Center(
             child: Text(
               'SIGN IN',
-              style: Theme.of(context).accentTextTheme.button,
+              style: Theme.of(context)
+                  .accentTextTheme
+                  .button
+                  .copyWith(color: AppColor.white),
             ),
           ),
         ),

@@ -111,7 +111,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       child: Center(
                         child: Text(
                           'SIGN UP',
-                          style: Theme.of(context).accentTextTheme.button,
+                          style: Theme.of(context).accentTextTheme.button
+                            .copyWith(color: AppColor.white),
                         ),
                       ),
                     ),
