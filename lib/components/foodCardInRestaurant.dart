@@ -3,25 +3,24 @@ import 'package:delivery_food_app/theme/appcolor.dart';
 import 'package:flutter/material.dart';
 
 class FoodCardInRestaurant extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 327,
       height: 106,
-      decoration: BoxDecoration(color: AppColor.white, boxShadow: [
-        BoxShadow(
-          color: AppColor.black.withOpacity(0.1),
-          spreadRadius: 5,
-          blurRadius: 29,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ]),
-      padding: const EdgeInsets.only(
-        top: 15,
-        bottom: 10,
-        right: 15,
+      decoration: BoxDecoration(
+        color: AppColor.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: AppColor.black.withOpacity(0.1),
+            spreadRadius: 5,
+            blurRadius: 29,
+            offset: Offset(0, 2), // changes position of shadow
+          ),
+        ],
       ),
+      padding: const EdgeInsets.all(10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +74,9 @@ class FoodCardInRestaurant extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Text(
                       'Shrimp, mushroom, cheese, tomato',
                       maxLines: 1,
@@ -95,8 +96,8 @@ class FoodCardInRestaurant extends StatelessWidget {
                               .primaryTextTheme
                               .bodyText1
                               .copyWith(
-                                  fontWeight: FontWeight.w600,
-                                  ),
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
                         const SizedBox(width: 10),
                         Text(

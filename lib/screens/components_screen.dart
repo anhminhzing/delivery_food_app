@@ -1,6 +1,9 @@
-import 'package:delivery_food_app/components/FoodCardInRestaurantPurchased.dart';
+import 'package:delivery_food_app/components/foodCardInRestaurantPromote.dart';
+import 'package:delivery_food_app/components/foodCardInRestaurantPurchased.dart';
 import 'package:delivery_food_app/components/foodCardInOrder.dart';
 import 'package:delivery_food_app/components/foodCardInRestaurant.dart';
+import 'package:delivery_food_app/components/foodCardInRestaurantV2.dart';
+import 'package:delivery_food_app/components/foodOrderHistory.dart';
 import 'package:delivery_food_app/components/restaurantCard.dart';
 import 'package:delivery_food_app/theme/appColor.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +57,24 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                   ),
                   Text('Food card in restaurant purchased:'),
                   FoodCardInRestaurantPurchased(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text('Food card order history:'),
+                  FoodCardOrderHistory(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text('Food card in restaurant v2:'),
+                  FoodCardInRestaurantV2(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text('Food card in restaurant promote:'),
+                  FoodCardInRestaurantPromote(),
+                  SizedBox(
+                    height: 50,
+                  ),
                 ],
               ),
             )

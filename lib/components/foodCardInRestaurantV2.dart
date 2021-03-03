@@ -1,13 +1,14 @@
+
 import 'package:delivery_food_app/UIData.dart';
-import 'package:delivery_food_app/theme/appColor.dart';
+import 'package:delivery_food_app/theme/appcolor.dart';
 import 'package:flutter/material.dart';
 
-class FoodCardInOrder extends StatelessWidget {
+class FoodCardInRestaurantV2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 327,
-      height: 106,
+      height: 112,
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(10),
@@ -20,19 +21,19 @@ class FoodCardInOrder extends StatelessWidget {
           ),
         ],
       ),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(
+       10
+      ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              color: Colors.red,
               borderRadius: BorderRadius.circular(5),
               image: DecorationImage(
-                image: AssetImage(UIData.imgFood2),
+                image: AssetImage(UIData.imgFood3),
                 fit: BoxFit.cover,
               ),
             ),
@@ -42,27 +43,26 @@ class FoodCardInOrder extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      // 'Pizzon - Crib Ln',
-                      'Pizzon - Crib Ln Pizzon',
+                      'Steak Ipsum - North Bridge',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),
+                      style:
+                      Theme.of(context).textTheme.bodyText1.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const SizedBox(
                       height: 5,
                     ),
                     Text(
-                      '1 x Shrimp Pizza',
+                      '654 North Bridge, Halifax',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).accentTextTheme.caption,
@@ -75,40 +75,57 @@ class FoodCardInOrder extends StatelessWidget {
                     Row(
                       children: [
                         Icon(
-                          Icons.access_time,
+                          Icons.schedule,
+                          color: AppColor.neutral1,
                           size: 15,
-                          color: AppColor.orange,
                         ),
-                        SizedBox(
-                          width: 5,
-                        ),
+                        const SizedBox(width: 5),
                         Text(
-                          '14:50',
-                          style: Theme.of(context).primaryTextTheme.bodyText2,
-                        )
+                          '18',
+                          style:
+                          Theme.of(context).accentTextTheme.caption,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          'min',
+                          style:
+                          Theme.of(context).accentTextTheme.caption,
+                        ),
                       ],
                     ),
                     Row(
                       children: [
+                        Icon(
+                          Icons.fiber_manual_record,
+                          color: AppColor.neutral2,
+                          size: 8,
+                        ),
+                        const SizedBox(width: 5),
                         Text(
-                          '\$',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyText2
-                              .copyWith(fontWeight: FontWeight.w600),
+                          '3 km',
+                          style:
+                          Theme.of(context).accentTextTheme.caption,
                         ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          '16',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyText2
-                              .copyWith(fontWeight: FontWeight.w600),
-                        ),
+                        const SizedBox(width: 5),
                       ],
                     ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                          size: 16,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          '5.0',
+                          style: Theme.of(context)
+                              .accentTextTheme
+                              .caption
+                              .copyWith(color: AppColor.black),
+                        ),
+                      ],
+                    )
                   ],
                 )
               ],
