@@ -22,8 +22,6 @@ class FoodCardInOrder extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(10),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 80,
@@ -41,77 +39,79 @@ class FoodCardInOrder extends StatelessWidget {
             width: 15,
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      // 'Pizzon - Crib Ln',
-                      'Pizzon - Crib Ln Pizzon',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                            fontWeight: FontWeight.w600,
+            child: Container(
+              height: 80,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        // 'Pizzon - Crib Ln',
+                        'Pizzon - Crib Ln Pizzon',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        '1 x Shrimp Pizza',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).accentTextTheme.caption,
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.access_time,
+                            size: 15,
+                            color: AppColor.orange,
                           ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      '1 x Shrimp Pizza',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).accentTextTheme.caption,
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.access_time,
-                          size: 15,
-                          color: AppColor.orange,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          '14:50',
-                          style: Theme.of(context).primaryTextTheme.bodyText2,
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          '\$',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyText2
-                              .copyWith(fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          '16',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyText2
-                              .copyWith(fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            '14:50',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '\$',
+                            style: Theme.of(context)
+                                .primaryTextTheme
+                                .bodyText2
+                                .copyWith(fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            '16',
+                            style: Theme.of(context)
+                                .primaryTextTheme
+                                .bodyText2
+                                .copyWith(fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           )
         ],

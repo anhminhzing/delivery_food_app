@@ -23,13 +23,11 @@ class FoodCardInRestaurant extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              color: Colors.red,
               borderRadius: BorderRadius.circular(5),
               image: DecorationImage(
                 image: AssetImage(UIData.imgFood3),
@@ -41,79 +39,79 @@ class FoodCardInRestaurant extends StatelessWidget {
             width: 15,
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            'Shrimp pizza',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style:
-                                Theme.of(context).textTheme.bodyText1.copyWith(
-                                      fontWeight: FontWeight.w600,
-                                    ),
+            child: Container(
+              height: 80,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'Shrimp pizza',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style:
+                                  Theme.of(context).textTheme.bodyText1.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                            ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Text(
-                            'Kcal: 475',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).accentTextTheme.caption,
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Kcal: 475',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).accentTextTheme.caption,
+                            ),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'Shrimp, mushroom, cheese, tomato',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).accentTextTheme.caption,
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            '\$ 99.00',
+                            style: Theme.of(context)
+                                .primaryTextTheme
+                                .bodyText1
+                                .copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'Shrimp, mushroom, cheese, tomato',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).accentTextTheme.caption,
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          '\$ 99.00',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyText1
-                              .copyWith(
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '\$ 20.00',
-                          style: Theme.of(context)
-                              .accentTextTheme
-                              .caption
-                              .copyWith(
-                                decoration: TextDecoration.lineThrough,
-                              ),
-                        )
-                      ],
-                    ),
-                  ],
-                )
-              ],
+                          const SizedBox(width: 10),
+                          Text(
+                            '\$ 20.00',
+                            style: Theme.of(context)
+                                .accentTextTheme
+                                .caption
+                                .copyWith(
+                                  decoration: TextDecoration.lineThrough,
+                                ),
+                          )
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           )
         ],
