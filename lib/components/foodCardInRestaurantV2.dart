@@ -1,4 +1,3 @@
-
 import 'package:delivery_food_app/UIData.dart';
 import 'package:delivery_food_app/theme/appcolor.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +20,7 @@ class FoodCardInRestaurantV2 extends StatelessWidget {
           ),
         ],
       ),
-      padding: const EdgeInsets.all(
-       10
-      ),
+      padding: const EdgeInsets.all(10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -55,10 +52,9 @@ class FoodCardInRestaurantV2 extends StatelessWidget {
                         'Steak Ipsum - North Bridge',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style:
-                        Theme.of(context).textTheme.bodyText1.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
                       ),
                       const SizedBox(
                         height: 5,
@@ -84,14 +80,12 @@ class FoodCardInRestaurantV2 extends StatelessWidget {
                           const SizedBox(width: 5),
                           Text(
                             '18',
-                            style:
-                            Theme.of(context).accentTextTheme.caption,
+                            style: Theme.of(context).accentTextTheme.caption,
                           ),
                           const SizedBox(width: 5),
                           Text(
                             'min',
-                            style:
-                            Theme.of(context).accentTextTheme.caption,
+                            style: Theme.of(context).accentTextTheme.caption,
                           ),
                         ],
                       ),
@@ -105,8 +99,7 @@ class FoodCardInRestaurantV2 extends StatelessWidget {
                           const SizedBox(width: 5),
                           Text(
                             '3 km',
-                            style:
-                            Theme.of(context).accentTextTheme.caption,
+                            style: Theme.of(context).accentTextTheme.caption,
                           ),
                           const SizedBox(width: 5),
                         ],

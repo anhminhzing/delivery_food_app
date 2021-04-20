@@ -1,5 +1,7 @@
 import 'package:delivery_food_app/routes/route_name.dart';
 import 'package:delivery_food_app/screens/components_screen.dart';
+import 'package:delivery_food_app/screens/home/home_screen.dart';
+import 'package:delivery_food_app/screens/navigation/main_navigation_page.dart';
 import 'package:delivery_food_app/screens/profileUser/profileuser_screen.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
@@ -19,8 +21,42 @@ class AppRoute {
         return buildRoute(setting: setting, builder: ComponentsScreen());
       case RouteName.profileUser:
         return buildRoute(setting: setting, builder: ProfileUserScreen());
+      case RouteName.home:
+        return buildRoute(setting: setting, builder: HomeScreen());
+      case RouteName.mainNavigationTest:
+        return buildRoute(setting: setting, builder: MainNavigationPage());
       default:
         return _errorBuild();
+    }
+  }
+
+  static Route buildRouteScreen1(RouteSettings setting) {
+    switch (setting.name) {
+      case RouteName.home:
+        return buildRoute(builder: HomeScreen(), setting: setting);
+        break;
+      default:
+        return buildRoute(builder: HomeScreen(), setting: setting);
+    }
+  }
+
+  static Route buildRouteScreen2(RouteSettings setting) {
+    switch (setting.name) {
+      case RouteName.home:
+        return buildRoute(builder: ProfileUserScreen(), setting: setting);
+        break;
+      default:
+        return buildRoute(builder: HomeScreen(), setting: setting);
+    }
+  }
+
+  static Route buildRouteScreen3(RouteSettings setting) {
+    switch (setting.name) {
+      case RouteName.home:
+        return buildRoute(builder: ComponentsScreen(), setting: setting);
+        break;
+      default:
+        return buildRoute(builder: ComponentsScreen(), setting: setting);
     }
   }
 

@@ -10,5 +10,14 @@ class UIData {
   static const String ic_camera = '$dir/icon_camera.png';
   static const String ic_maker = '$dir/icon_maker.png';
   static const String ic_check = '$dir/icon_check.png';
-
+  static const String img_slide1 = '$dir/slide1.png';
+  static const String img_slide2 = '$dir/slide2.png';
+  static const String ic_promote = '$dir/promote.png';
+  static const String ic_meal = '$dir/meal.png';
+  static const String ic_snack = '$dir/snack.png';
+  static const String ic_drink = '$dir/drink.png';
+  static const String ic_fastfood = '$dir/fastfood.png';
+  static const String newzealander = '$dir/newzealander.png';
+  static const String greece = '$dir/greece.png';
+  static const String italian = '$dir/italian.png';
 }

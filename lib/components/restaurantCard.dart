@@ -19,14 +19,18 @@ class RestaurantCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(10.0),
-        boxShadow: [
-          BoxShadow(
-            color: AppColor.black.withOpacity(0.1),
-            spreadRadius: 5,
-            blurRadius: 18,
-            offset: Offset(0, 2), // changes position of shadow
-          ),
-        ],
+        border: Border.all(
+          color: AppColor.neutral3,
+          width: 1,
+        )
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: AppColor.black.withOpacity(0.1),
+        //     spreadRadius: 5,
+        //     blurRadius: 18,
+        //     offset: Offset(0, 2), // changes position of shadow
+        //   ),
+        // ],
       ),
       child: Column(
         children: [
