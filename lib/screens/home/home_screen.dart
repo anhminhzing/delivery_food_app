@@ -1,5 +1,6 @@
 import 'package:delivery_food_app/UIData.dart';
 import 'package:delivery_food_app/components/restaurantCard.dart';
+import 'package:delivery_food_app/routes/route_name.dart';
 import 'package:delivery_food_app/screens/home/component/category_button.dart';
 import 'package:delivery_food_app/screens/home/component/slide.dart';
 import 'package:delivery_food_app/theme/appcolor.dart';
@@ -279,9 +280,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: categories[index]['title'],
                 urlImage: categories[index]['urlImage'],
                 margin: index == 0 ? const EdgeInsets.only(right: 15) : null,
-                callBackFunction: () {
-                  print('callback $index');
-                },
+                callBackFunction: navigateToCategories,
               );
             },
           ),
@@ -379,12 +378,10 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
           ),
-
           child: Image(
             image: AssetImage(urlImage),
             fit: BoxFit.contain,
           ),
-
         ),
         const SizedBox(height: 10),
         Text(
@@ -393,6 +390,10 @@ class _HomeScreenState extends State<HomeScreen> {
         )
       ],
     );
+  }
+
+  void navigateToCategories(){
+    Navigator.pushNamed(context, RouteName.categories);
   }
 
   @override

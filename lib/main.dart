@@ -91,6 +91,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, RouteName.mainNavigationTest);
               },
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            RaisedButton(
+              child: Text('Categories'),
+              onPressed: () {
+                Navigator.pushNamed(context, RouteName.categories);
+              },
+            ),
           ],
         ),
       ),

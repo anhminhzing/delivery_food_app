@@ -1,4 +1,5 @@
 import 'package:delivery_food_app/routes/route_name.dart';
+import 'package:delivery_food_app/screens/categories/categories_screen.dart';
 import 'package:delivery_food_app/screens/components_screen.dart';
 import 'package:delivery_food_app/screens/home/home_screen.dart';
 import 'package:delivery_food_app/screens/navigation/main_navigation_page.dart';
@@ -25,6 +26,8 @@ class AppRoute {
         return buildRoute(setting: setting, builder: HomeScreen());
       case RouteName.mainNavigationTest:
         return buildRoute(setting: setting, builder: MainNavigationPage());
+      case RouteName.categories:
+        return buildRoute(setting: setting, builder: CategoriesScreen());
       default:
         return _errorBuild();
     }
