@@ -3,6 +3,7 @@ import 'package:delivery_food_app/screens/categories/categories_screen.dart';
 import 'package:delivery_food_app/screens/components_screen.dart';
 import 'package:delivery_food_app/screens/home/home_screen.dart';
 import 'package:delivery_food_app/screens/navigation/main_navigation_page.dart';
+import 'package:delivery_food_app/screens/profile/profile_screen.dart';
 import 'package:delivery_food_app/screens/profileUser/profileuser_screen.dart';
 import 'package:delivery_food_app/screens/sign_in_screen.dart';
 import 'package:delivery_food_app/screens/sign_up_screen.dart';
@@ -28,6 +29,8 @@ class AppRoute {
         return buildRoute(setting: setting, builder: MainNavigationPage());
       case RouteName.categories:
         return buildRoute(setting: setting, builder: CategoriesScreen());
+      case RouteName.profile:
+        return buildRoute(setting: setting, builder: ProfileScreen());
       default:
         return _errorBuild();
     }

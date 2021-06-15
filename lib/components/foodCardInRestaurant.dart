@@ -6,7 +6,7 @@ class FoodCardInRestaurant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327,
+      width: MediaQuery.of(context).size.width * 0.9,
       height: 106,
       decoration: BoxDecoration(
         color: AppColor.white,
@@ -62,7 +62,7 @@ class FoodCardInRestaurant extends StatelessWidget {
                             ),
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 1,
                             child: Text(
                               'Kcal: 475',
                               maxLines: 1,

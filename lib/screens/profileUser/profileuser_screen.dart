@@ -18,6 +18,7 @@ class _ProfileUserScreenState extends State<ProfileUserScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile & Address'),
+        centerTitle: true,
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),

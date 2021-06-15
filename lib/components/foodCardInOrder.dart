@@ -6,7 +6,7 @@ class FoodCardInOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327,
+      width: MediaQuery.of(context).size.width * 0.9,
       height: 106,
       decoration: BoxDecoration(
         color: AppColor.white,

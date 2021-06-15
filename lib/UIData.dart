@@ -20,4 +20,7 @@ class UIData {
   static const String newzealander = '$dir/newzealander.png';
   static const String greece = '$dir/greece.png';
   static const String italian = '$dir/italian.png';
+  static const String oval = '$dir/Oval.png';
+  static const String oval1 = '$dir/Oval-1.png';
+  static const String path = '$dir/Path.png';
 }

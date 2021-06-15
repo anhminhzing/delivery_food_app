@@ -100,6 +100,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, RouteName.categories);
               },
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            RaisedButton(
+              child: Text('Profile'),
+              onPressed: () {
+                Navigator.pushNamed(context, RouteName.profile);
+              },
+            ),
           ],
         ),
       ),

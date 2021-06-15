@@ -19,6 +19,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Component'),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Stack(

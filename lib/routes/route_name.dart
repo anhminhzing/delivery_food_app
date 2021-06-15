@@ -12,4 +12,5 @@ class RouteName {
   static const String home = '/home';
   static const String mainNavigationTest = '/main-navigation';
   static const String categories = '/categories';
+  static const String profile = '/profile';
 }

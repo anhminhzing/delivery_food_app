@@ -53,6 +53,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
         preferredSize: Size.fromHeight(150.0),
         child: AppBar(
           title: Text('Categories'),
+          centerTitle: true,
           bottom: TabBar(
             controller: _tabController,
             isScrollable: true,

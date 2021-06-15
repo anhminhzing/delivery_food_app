@@ -6,7 +6,7 @@ class FoodCardOrderHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327,
+      width: MediaQuery.of(context).size.width * 0.9,
       height: 150,
       decoration: BoxDecoration(
         color: AppColor.white,
